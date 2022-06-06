@@ -27,10 +27,8 @@ public class Q3 {
 	}
 	
 	public static void writefile(String[] data) {
-		String fileName = "UserCar.txt";
-		BufferedWriter bw = null;
 		try {
-			bw = new BufferedWriter(new FileWriter(fileName));
+			BufferedWriter bw = new BufferedWriter(new FileWriter("UserCar.txt"));
 			for(int i=0;i<data.length;i++) {
 				bw.write(data[i]+"\n");
 			}
@@ -42,9 +40,8 @@ public class Q3 {
 	}
 	
 	public static void readfile() {
-		String fileName = "UserCar.txt";
 		try {
-			BufferedReader br = new BufferedReader(new FileReader(fileName));
+			BufferedReader br = new BufferedReader(new FileReader("UserCar.txt"));
 			String line;
 			while((line = br.readLine()) != null) {
 				System.out.println(line);
